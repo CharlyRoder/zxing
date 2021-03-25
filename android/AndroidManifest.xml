@@ -45,10 +45,10 @@
                android:allowBackup="true">
     <activity android:name=".CaptureActivity"
               android:screenOrientation="sensorLandscape"
-              android:clearTaskOnLaunch="true"
+              android:clearTaskOnLaunch="true"//每次home后，从这个activity启动
               android:stateNotNeeded="true"
               android:theme="@style/CaptureTheme"
-              android:windowSoftInputMode="stateAlwaysHidden">
+              android:windowSoftInputMode="stateAlwaysHidden">//软键盘一直隐藏
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
@@ -99,13 +99,13 @@
       <intent-filter>
         <action android:name="android.intent.action.SEND"/>
         <category android:name="android.intent.category.DEFAULT"/>
-        <data android:mimeType="text/x-vcard"/>
+        <data android:mimeType="text/x-vcard"/>//分享电话簿
       </intent-filter>
       <!-- This allows us to handle sharing any plain text . -->
       <intent-filter>
         <action android:name="android.intent.action.SEND"/>
         <category android:name="android.intent.category.DEFAULT"/>
-        <data android:mimeType="text/plain"/>
+        <data android:mimeType="text/plain"/>//分享文字
       </intent-filter>
     </activity>
     <activity android:name=".book.SearchBookContentsActivity"
